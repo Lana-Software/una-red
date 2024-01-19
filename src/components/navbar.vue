@@ -4,7 +4,7 @@
         <a href="#" class="item"> Asignaturas </a>
         <a href="#" class="item"> Profesores Recomendados </a>
         <a href="#" class="item"> UNAL Emprende </a>
-        <a href="#" class="item"> Lana Team </a>
+        <a href="../views/Team.vue" class="item"> Lana Team </a>
     </div>
 </template>
 
