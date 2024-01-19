@@ -1,4 +1,4 @@
-# una-red
+# UNa red.
 Welcome to UNa red, where academic excellence meets limitless opportunities! Explore a revolutionary educational experience designed to propel your success and open doors to a world of possibilities.
 
 ## Supercharge Your Academic Journey:
