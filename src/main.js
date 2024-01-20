@@ -1,3 +1,4 @@
+import '@material/web/all.js'
 import { createApp } from 'vue'
 import App from './App.vue'
 
