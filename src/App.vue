@@ -6,8 +6,8 @@
 
 <script>
 	import '../public/styles.css';
-	import navbar from './components/navbar.vue';
-	import search from './components/search.vue';
+	import navbar from './components/component_navbar.vue';
+	import search from './components/component_search.vue';
 
 	export default {
 		name: 'App',
@@ -22,7 +22,7 @@
 <style>
 	#app {
 		text-align: center;
-  		margin-top: 24px;
+		margin-top: 24px;
 	}
 
 	.title {
