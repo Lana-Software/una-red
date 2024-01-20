@@ -11,6 +11,9 @@ dependencies:
   core-js:
     specifier: ^3.8.3
     version: 3.35.0
+  material-symbols:
+    specifier: ^0.14.5
+    version: 0.14.5
   vue:
     specifier: ^3.2.13
     version: 3.4.15
@@ -4750,6 +4753,10 @@ packages:
     dependencies:
       semver: 6.3.1
     dev: true
+
+  /material-symbols@0.14.5:
+    resolution: {integrity: sha512-3fB0MEG93k8C7D7sI0HSQWlKy3rgIQ6HPICkEPs9blsod/nWofSBdDPvUa9XpNRIqciqLA+hZF8DVnA4J19BlQ==}
+    dev: false
 
   /mdn-data@2.0.14:
     resolution: {integrity: sha512-dn6wd0uw5GsdswPFfsgMp5NSB0/aDe6fK94YJV/AJDYXL6HVLWBsxeq7js7Ad+mU2K9LAlwpk6kN2D5mwCPVow==}
