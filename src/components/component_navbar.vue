@@ -1,10 +1,25 @@
+<!-- eslint-disable vue/no-deprecated-slot-attribute -->
 <template class="content">
     <div class="nav">
-        <a href="#" class="item"> Inicio </a>
-        <a href="#" class="item"> Asignaturas </a>
-        <a href="#" class="item"> Profesores Recomendados </a>
-        <a href="#" class="item"> UNAL Emprende </a>
-        <a href="../views/Team.vue" class="item"> Lana Team </a>
+        <md-tabs>
+            <md-primary-tab>
+                <a href="#">Inicio</a>
+            </md-primary-tab>
+            <md-primary-tab>
+                <a href="#">Asignaturas</a>
+            </md-primary-tab>
+            <md-primary-tab>
+                <a href="#">Profesores Recomendados</a>
+            </md-primary-tab>
+            <md-primary-tab>
+                <a href="#">UNAL Emprende</a>
+            </md-primary-tab>
+            <md-primary-tab>
+                <a href="../views/Team.vue">
+                    <span>Lana Team</span>
+                </a>
+            </md-primary-tab>
+        </md-tabs>
     </div>
 </template>
 
@@ -13,9 +28,14 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only --> 
 <style scoped>
-    .item {
-        color: #191717;
-        margin: 0 14px;
+    .nav{
+        display: flex;
+        flex: 1 0 70%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    md-primary-tab {
         font-weight: 500;
     }
 

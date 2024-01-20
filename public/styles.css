@@ -4,6 +4,20 @@
   font-family: "Outfit", sans-serif;
 }
 
+:root {
+  /* System tokens */
+  --md-sys-color-surface: #F1EFEF;
+  --md-sys-color-primary: #191717;
+  --md-sys-color-surface-container: #F1EFEF;
+
+  /* Component tokens */
+  --md-primary-tab-label-text-font: 'Roboto', system-ui;
+  --md-primary-tab-label-text-size: 1em;
+  /* --md-primary-tab-container-shape: 15px; */
+  --md-primary-tab-active-indicator-color:#000000;
+
+}
+
 a, a:visited, a:hover, a:active {
     text-decoration: none;
     color: #000;
