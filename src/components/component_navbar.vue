@@ -3,21 +3,29 @@
     <div class="nav">
         <md-tabs>
             <md-primary-tab>
-                <a href="#">Inicio</a>
+                <router-link to="/">
+                    <span> Inicio </span>
+                </router-link>
             </md-primary-tab>
             <md-primary-tab>
-                <a href="#">Asignaturas</a>
+                <router-link to="/">
+                    <span> Asignaturas </span>
+                </router-link>
             </md-primary-tab>
             <md-primary-tab>
-                <a href="#">Profesores Recomendados</a>
+                <router-link to="/">
+                    <span> Profesores Recomendados </span>
+                </router-link>
             </md-primary-tab>
             <md-primary-tab>
-                <a href="#">UNAL Emprende</a>
+                <router-link to="/">
+                    <span> UNAL Emprende </span>
+                </router-link>
             </md-primary-tab>
             <md-primary-tab>
-                <a href="../views/Team.vue">
-                    <span>Lana Team</span>
-                </a>
+                <router-link to="/lanateam">
+                    <span> Lana Team </span>
+                </router-link>
             </md-primary-tab>
         </md-tabs>
     </div>

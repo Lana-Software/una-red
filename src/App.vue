@@ -1,18 +1,14 @@
 <template>
 	<navbar />
-	<h1 class="title"> UNa red. </h1>
-	<search />
+	<router-view></router-view>
 </template>
 <script>
-	import '../public/styles.css';
-	import navbar from './components/component_navbar.vue';
-	import search from './components/component_search.vue';
+	import navbar from '@src/components/component_navbar.vue';
 
 	export default {
 		name: 'App',
 		components: {
 			navbar,
-			search
 		}
 	}
 </script>
