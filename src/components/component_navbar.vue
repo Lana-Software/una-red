@@ -15,9 +15,9 @@
                 <a href="#">UNAL Emprende</a>
             </md-primary-tab>
             <md-primary-tab>
-                <a href="../views/Team.vue">
+                <router-link to="/lanateam">
                     <span>Lana Team</span>
-                </a>
+                </router-link>
             </md-primary-tab>
         </md-tabs>
     </div>
