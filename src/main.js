@@ -1,4 +1,5 @@
 import '@material/web/all.js';
+import './styles.css';
 import router from './router/index';
 import 'material-symbols';
 import { createApp } from 'vue'

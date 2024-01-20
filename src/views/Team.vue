@@ -3,12 +3,11 @@
 </template>
 
 <script>
-    export default {
-		name: 'Team',
-		components: {
-		}
-	}
+export default {
+    name: 'Team',
+    components: {
+    }
+}
 </script>
 
-<style>
-</style>
+<style></style>
