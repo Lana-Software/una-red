@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
-* {
-  font-family: "Outfit", sans-serif;
-}
-
 :root {
   /* System tokens */
   --md-sys-color-surface: #F1EFEF;
@@ -14,15 +10,42 @@
   --md-primary-tab-label-text-font: 'Roboto', system-ui;
   --md-primary-tab-label-text-size: 1em;
   /* --md-primary-tab-container-shape: 15px; */
-  --md-primary-tab-active-indicator-color:#000000;
+  --md-primary-tab-active-indicator-color: #000000;
 
+  /* others */
+  --others-a-active-color: #000000;
+  --others-body-background-color: #F1EFEF;
+
+  --color-primary: #ffffff;
 }
 
-a, a:visited, a:hover, a:active {
-    text-decoration: none;
-    color: #000;
+* {
+  font-family: "Outfit", sans-serif;
+  box-sizing: border-box;
+}
+
+a,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: var(--others-a-active-color);
 }
 
 body {
-    background-color: #F1EFEF;
+  background-color: var(--others-body-background-color);
+  min-height: 100dvh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
 }

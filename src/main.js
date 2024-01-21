@@ -1,8 +1,8 @@
 import '@material/web/all.js';
-import './styles.css';
-import router from './router/index';
+import App from '@src/App.vue';
+import router from '@src/router/index';
+import '@src/styles.css';
 import 'material-symbols';
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from 'vue';
 
 createApp(App).use(router).mount('#app')
