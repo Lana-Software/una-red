@@ -1,4 +1,3 @@
-<!-- eslint-disable vue/no-deprecated-slot-attribute -->
 <template class="content">
   <div class="search-bar">
     <a href="#" class="burger-menu">
@@ -31,7 +30,7 @@
   min-height: 100%;
   justify-content: center;
   align-items: center;
-  background-color: #ffffff;
+  background-color: var(--color-primary);
   border-radius: 50px 0 0 50px;
 }
 
