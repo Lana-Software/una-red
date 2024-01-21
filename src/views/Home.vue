@@ -2,19 +2,11 @@
   <h1 class="title"> UNa red. </h1>
   <search />
 </template>
-<script>
+<script setup>
 import search from '@src/components/component_search.vue';
-
-export default {
-  name: 'App',
-  components: {
-    search,
-  }
-}
 </script>
-<style>
+<style scoped>
 .title {
-  font-size: 48px;
-  margin-top: 100px;
+  font-size: 3rem;
 }
 </style>

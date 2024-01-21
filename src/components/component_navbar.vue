@@ -31,23 +31,18 @@
   </div>
 </template>
 
-<script>
+<script setup>
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .nav {
   display: flex;
-  flex: 1 0 70%;
   justify-content: center;
   align-items: center;
 }
 
 md-primary-tab {
   font-weight: 500;
-}
-
-.item:hover {
-  border-bottom: 3px solid #191717;
 }
 </style>
