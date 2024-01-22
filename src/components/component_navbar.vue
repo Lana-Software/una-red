@@ -22,11 +22,11 @@
           <span> UNAL Emprende </span>
         </router-link>
       </md-primary-tab>
-      <md-primary-tab>
-        <router-link to="/lanateam">
+      <router-link to="/lanateam">
+        <md-primary-tab>
           <span> Lana Team </span>
-        </router-link>
-      </md-primary-tab>
+        </md-primary-tab>
+      </router-link>
     </md-tabs>
   </div>
 </template>
