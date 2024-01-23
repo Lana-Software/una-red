@@ -1,48 +1,33 @@
 <!-- eslint-disable vue/no-deprecated-slot-attribute -->
 <template class="content">
   <div class="nav">
-    <md-tabs>
-      <md-primary-tab>
-        <router-link to="/">
-          <span> Inicio </span>
-        </router-link>
-      </md-primary-tab>
-      <md-primary-tab>
-        <router-link to="/">
-          <span> Asignaturas </span>
-        </router-link>
-      </md-primary-tab>
-      <md-primary-tab>
-        <router-link to="/">
-          <span> Profesores Recomendados </span>
-        </router-link>
-      </md-primary-tab>
-      <md-primary-tab>
-        <router-link to="/">
-          <span> UNAL Emprende </span>
-        </router-link>
-      </md-primary-tab>
-      <router-link to="/lanateam">
-        <md-primary-tab>
-          <span> Lana Team </span>
-        </md-primary-tab>
-      </router-link>
-    </md-tabs>
+    <router-link to="/"><span class="item" onclick="resaltarItem(this)"> Inicio </span></router-link>
+    <router-link to="/"><span class="item"> Asignaturas </span></router-link>
+    <router-link to="/"><span class="item"> Profesores Recomendados </span></router-link>
+    <router-link to="/"><span class="item"> UNAL Emprende </span></router-link>
+    <router-link to="/lanateam"><span class="item"> Lana Team </span></router-link>
   </div>
 </template>
 
 <script setup>
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: 500;
+  margin: 30px 0 0 0;
 }
 
-md-primary-tab {
-  font-weight: 500;
+.item {
+  cursor: pointer;
+  padding: 14px 15px;
+}
+
+.item:hover {
+  background-color: #dfdfdf;
+  border-bottom: 2px solid var(--md-sys-color-primary);
 }
 </style>

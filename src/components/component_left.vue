@@ -18,7 +18,7 @@
 	float: left;
 	background-color: var(--md-sys-color-primary);
 	color: var(--md-sys-color-surface);
-	margin: 12px 0 0 24px;
+	margin: -5px 0 0 24px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
