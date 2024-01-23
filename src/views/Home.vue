@@ -1,4 +1,5 @@
 <template>
+  <float />
   <h1 class="title"> UNa red. </h1>
   <search />
 </template>
