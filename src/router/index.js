@@ -12,6 +12,11 @@ const router = createRouter({
       name: "lanateam",
       component: () => import("../views/Team.vue"),
     },
+    {
+      path: "/info",
+      name: "info",
+      component: () => import("../views/Info.vue"),
+    },
   ]
 })
 

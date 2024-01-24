@@ -4,10 +4,10 @@
 	</div>
 	<div class="menu" id="menu">
 		<div class="items">
-			<router-link to="/"><p class="menu-item whatsapp-link"> Grupos de WhatsApp </p></router-link>
+			<router-link to="/info"><p class="menu-item whatsapp-link"> Grupos de WhatsApp </p></router-link>
 			<router-link to="/"><p class="menu-item"> Colaboradores </p></router-link>
 			<router-link to="/"><p class="menu-item"> Trabaja con nosotros </p></router-link>
-			<router-link to="/"><button class="button-close" id="button-close"> Cerrar menú </button></router-link>
+			<button class="button-close" id="button-close"> Cerrar menú </button>
 		</div>
 	</div>
 </template>
