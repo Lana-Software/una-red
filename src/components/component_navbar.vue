@@ -1,5 +1,10 @@
+<<<<<<< HEAD
 <template class="content navbar">
   <div v-if="show==true" class="nav">
+=======
+<template class="content">
+  <div class="nav">
+>>>>>>> 8729e7a8705c03b68739c9c6b25e6a6e440edf8d
     <router-link to="/"><span class="item"> Inicio </span></router-link>
     <router-link to="/"><span class="item"> Asignaturas </span></router-link>
     <router-link to="/"><span class="item"> Docentes </span></router-link>
