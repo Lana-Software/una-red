@@ -1,10 +1,9 @@
-<!-- eslint-disable vue/no-deprecated-slot-attribute -->
 <template class="content">
   <div class="nav">
     <router-link to="/"><span class="item"> Inicio </span></router-link>
     <router-link to="/"><span class="item"> Asignaturas </span></router-link>
-    <router-link to="/"><span class="item"> Profesores recomendados </span></router-link>
-    <router-link to="/"><span class="item"> UNAL Emprende </span></router-link>
+    <router-link to="/"><span class="item"> Docentes </span></router-link>
+    <router-link to="/"><span class="item"> UNAL emprende </span></router-link>
     <router-link to="/lanateam"><span class="item"> Lana Team </span></router-link>
   </div>
 </template>

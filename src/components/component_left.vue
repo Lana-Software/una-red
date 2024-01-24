@@ -3,11 +3,12 @@
 		<p>+</p>
 	</div>
 	<div class="menu" id="menu">
-		<p class="menu-item whatsapp-link"> Grupos de WhatsApp </p>
-		<p class="menu-item"> Colaboradores </p>
-		<p class="menu-item"> Trabaja con nosotros </p>
-		<button class="button-close" id="button-close"> Cerrar menú </button>
-		<!-- <span class="material-symbols-outlined">arrow_back</span> -->
+		<div class="items">
+			<router-link to="/"><p class="menu-item whatsapp-link"> Grupos de WhatsApp </p></router-link>
+			<router-link to="/"><p class="menu-item"> Colaboradores </p></router-link>
+			<router-link to="/"><p class="menu-item"> Trabaja con nosotros </p></router-link>
+			<router-link to="/"><button class="button-close" id="button-close"> Cerrar menú </button></router-link>
+		</div>
 	</div>
 </template>
   
@@ -39,7 +40,7 @@ export default {
 	float: left;
 	background-color: var(--md-sys-color-primary);
 	color: var(--md-sys-color-surface);
-	margin: -5px 0 0 24px;
+	margin: -7px 0 0 24px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -61,7 +62,7 @@ export default {
   animation-duration: .7s;
 }
 
-.menu-item:first-child {
+.items {
 	margin-top: 28px;
 }
 
