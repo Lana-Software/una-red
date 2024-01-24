@@ -1,15 +1,15 @@
 <!-- eslint-disable vue/no-deprecated-slot-attribute -->
 <template class="content">
   <div class="nav">
-    <router-link to="/"><span class="item" onclick="resaltarItem(this)"> Inicio </span></router-link>
+    <router-link to="/"><span class="item"> Inicio </span></router-link>
     <router-link to="/"><span class="item"> Asignaturas </span></router-link>
-    <router-link to="/"><span class="item"> Profesores Recomendados </span></router-link>
+    <router-link to="/"><span class="item"> Profesores recomendados </span></router-link>
     <router-link to="/"><span class="item"> UNAL Emprende </span></router-link>
     <router-link to="/lanateam"><span class="item"> Lana Team </span></router-link>
   </div>
 </template>
 
-<script setup>
+<script>
 </script>
 
 <style scoped>

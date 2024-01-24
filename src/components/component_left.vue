@@ -3,10 +3,10 @@
 		<p>+</p>
 	</div>
 	<div class="menu" id="menu">
-		<p class="menu-item whatsapp-link"> Grupos De WhatsApp </p>
+		<p class="menu-item whatsapp-link"> Grupos de WhatsApp </p>
 		<p class="menu-item"> Colaboradores </p>
-		<p class="menu-item"> Trabaja Con Nosotros </p>
-		<button class="button-close" id="button-close"> Cerrar Menu </button>
+		<p class="menu-item"> Trabaja con nosotros </p>
+		<button class="button-close" id="button-close"> Cerrar menú </button>
 		<!-- <span class="material-symbols-outlined">arrow_back</span> -->
 	</div>
 </template>
@@ -18,10 +18,14 @@ export default {
 		button.addEventListener("click", function(){
 			document.getElementById("menu").style.display = "block";
 		});
-
-		const button_close = document.getElementById("button_close");
+		
+		const button_close = document.getElementById("button-close");
 		button_close.addEventListener("click", function(){
-			document.getElementById("menu").style.display = "none";
+			document.getElementById("menu").classList.add("menu-hide");
+			setTimeout(function () {
+				document.getElementById("menu").style.display = "none";
+				document.getElementById("menu").classList.remove("menu-hide");
+			}, 680);
 		})
 	}
 }
@@ -53,7 +57,7 @@ export default {
 	background: var(--md-sys-color-primary);
 	text-align: center;
 
-	animation: fadeInLeftBig; /* referring directly to the animation's @keyframe declaration */
+	animation: fadeInLeftBig;
   animation-duration: .7s;
 }
 
@@ -65,15 +69,9 @@ export default {
 	color: var(--md-sys-color-surface);
 }
 
-.oculto {
-  display: none;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.visible {
-  display: block;
-  opacity: 1;
+.menu-hide {
+	animation: fadeOutLeft;
+  animation-duration: .7s;
 }
 
 .button-close {
