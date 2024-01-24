@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-<template class="content navbar">
-  <div v-if="show==true" class="nav">
-=======
 <template class="content">
-  <div class="nav">
->>>>>>> 8729e7a8705c03b68739c9c6b25e6a6e440edf8d
+  <div v-if="show==true" class="nav">
     <router-link to="/"><span class="item"> Inicio </span></router-link>
     <router-link to="/"><span class="item"> Asignaturas </span></router-link>
     <router-link to="/"><span class="item"> Docentes </span></router-link>
@@ -29,12 +24,10 @@ export default {
   watch: {
     '$route'(to, from) {
       const path = to.path;
-      if(path == '/'){ // Add other paths.
+      if(path == '/' || path == '/lanateam'){ // Add other paths.
         this.show = true;
-        console.log("Entre a true")
       } else {
         this.show = false;
-        console.log("Entre a false")
       }
     }
   }
