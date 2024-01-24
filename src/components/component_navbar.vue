@@ -27,7 +27,7 @@
 }
 
 .item:hover {
-  background-color: #dfdfdf;
+  background-color: #dddddd;
   border-bottom: 2px solid var(--md-sys-color-primary);
 }
 </style>
