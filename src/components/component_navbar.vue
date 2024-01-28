@@ -1,55 +1,57 @@
 <template class="content">
-  <div v-if="show==true" class="nav">
-    <router-link to="/"><span class="item"> Inicio </span></router-link>
-    <router-link to="/"><span class="item"> Asignaturas </span></router-link>
-    <router-link to="/"><span class="item"> Docentes </span></router-link>
-    <router-link to="/"><span class="item"> UNAL emprende </span></router-link>
-    <router-link to="/lanateam"><span class="item"> Lana Team </span></router-link>
-  </div>
-  <div v-else class="nav">
-    <router-link to="/"><span class="item"> Inicio </span></router-link>
-    <router-link to="/"><span class="item"> Grupos de WhatsApp </span></router-link>
-    <router-link to="/"><span class="item"> Colaboradores </span></router-link>
-    <router-link to="/"><span class="item"> Trabaja con nosotros  </span></router-link>
-  </div>
+  <nav class="nav">
+    <md-tabs id="navbar-1">
+      <md-primary-tab v-for="link in getLinks()" :key="link.val" @click="$router.push('/')">
+        <span> {{link.val}} </span>
+      </md-primary-tab>
+    </md-tabs>
+  </nav>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      show: true,
-    };
-  },
-  watch: {
-    '$route'(to, from) {
-      const path = to.path;
-      if(path == '/' || path == '/lanateam'){ // Add other paths.
-        this.show = true;
-      } else {
-        this.show = false;
-      }
-    }
+<script setup>
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+
+const getLinks = () => {
+  const links_show = [
+    { val: 'Inicio', route: '/' },
+    { val: 'Asignaturas', route: '/' },
+    { val: 'Docentes', route: '/' },
+    { val: 'UNAL emprende', route: '/' },
+    { val: 'Lana Team', route: '/lanateam' },
+  ]
+  const links_hide = [
+    { val: 'Inicio', route: '/' },
+    { val: 'Grupos de WhatsApp', route: '/' },
+    { val: 'Colaboradores', route: '/' },
+    { val: 'Trabaja con nosotros', route: '/' },
+  ]
+  if (router.currentRoute.value.path === '/lanateam' || router.currentRoute.value.path === '/') {
+    return links_show
+  } else {
+    return links_hide
   }
 }
 </script>
 
 <style scoped>
+
 .nav {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: 500;
-  margin: 30px 0 0 0;
 }
 
-.item {
-  cursor: pointer;
-  padding: 14px 15px;
+.nav > md-tabs{
+  flex: 1 1;
+  max-width: 35%;
 }
 
-.item:hover {
-  background-color: #dddddd;
-  border-bottom: 2px solid var(--md-sys-color-primary);
+@media (max-width: 1250px) {
+  .nav > md-tabs{
+    flex: 1 1;
+    max-width: 80%;
+}
 }
 </style>
