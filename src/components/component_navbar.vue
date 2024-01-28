@@ -2,7 +2,7 @@
   <nav class="nav">
     <md-tabs id="navbar-1">
       <md-primary-tab v-for="link in getLinks()" :key="link.val" @click="$router.push('/')">
-        <span> {{link.val}} </span>
+        <span> {{ link.val }} </span>
       </md-primary-tab>
     </md-tabs>
   </nav>
@@ -36,22 +36,21 @@ const getLinks = () => {
 </script>
 
 <style scoped>
-
 .nav {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.nav > md-tabs{
+.nav>md-tabs {
   flex: 1 1;
   max-width: 35%;
 }
 
 @media (max-width: 1250px) {
-  .nav > md-tabs{
+  .nav>md-tabs {
     flex: 1 1;
     max-width: 80%;
-}
+  }
 }
 </style>

@@ -6,8 +6,8 @@
   </div>
 </template>
 <script setup>
-import navbar from '@src/components/component_navbar.vue';
 import float from '@src/components/component_left.vue';
+import navbar from '@src/components/component_navbar.vue';
 </script>
 <style>
 .content-main {

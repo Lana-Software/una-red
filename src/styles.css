@@ -15,6 +15,8 @@
   --others-body-background-color: #F1EFEF;
 
   --color-primary: #ffffff;
+
+  color-scheme: light dark;
 }
 
 * {
@@ -46,4 +48,26 @@ h6 {
 
 p {
   text-wrap: pretty;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* System tokens */
+    --md-sys-color-surface: #191717;
+    --md-sys-color-primary: #F1EFEF;
+    --md-sys-color-surface-container: #191717;
+
+    /* Component tokens */
+    --md-primary-tab-label-text-font: 'Roboto',
+      system-ui;
+    --md-primary-tab-label-text-size: 1em;
+    /* --md-primary-tab-container-shape: 15px; */
+    --md-primary-tab-active-indicator-color: #F1EFEF;
+
+    /* others */
+    --others-a-active-color: #F1EFEF;
+    --others-body-background-color: #191717;
+
+    --color-primary: #191717;
+  }
 }
