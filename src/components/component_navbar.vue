@@ -1,19 +1,17 @@
 <template class="content">
-  <div v-if="show" class="nav">
-    <router-link v-for="link in getLinks()" :key="link.val" :to="link.route">
-      <span class="item" @click="goTo(link.route)">
-        {{ link.val }}
-      </span>
-    </router-link>
-  </div>
+  <nav class="nav">
+    <md-tabs id="navbar-1">
+      <md-primary-tab v-for="link in getLinks()" :key="link.val" @click="$router.push('/')">
+        <span> {{ link.val }} </span>
+      </md-primary-tab>
+    </md-tabs>
+  </nav>
 </template>
 
 <script setup>
-import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 
 const router = useRouter();
-const show = ref(true);
 
 const getLinks = () => {
   const links_show = [
@@ -35,9 +33,6 @@ const getLinks = () => {
     return links_hide
   }
 }
-const goTo = (route) => {
-  router.push(route);
-}
 </script>
 
 <style scoped>
@@ -45,17 +40,17 @@ const goTo = (route) => {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: 500;
-  margin: 30px 0 0 0;
 }
 
-.item {
-  cursor: pointer;
-  padding: 14px 15px;
+.nav>md-tabs {
+  flex: 1 1;
+  max-width: 35%;
 }
 
-.item:hover {
-  background-color: #dddddd;
-  border-bottom: 2px solid var(--md-sys-color-primary);
+@media (max-width: 1250px) {
+  .nav>md-tabs {
+    flex: 1 1;
+    max-width: 80%;
+  }
 }
 </style>
