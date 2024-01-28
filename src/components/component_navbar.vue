@@ -1,36 +1,42 @@
 <template class="content">
-  <div v-if="show==true" class="nav">
-    <router-link to="/"><span class="item"> Inicio </span></router-link>
-    <router-link to="/"><span class="item"> Asignaturas </span></router-link>
-    <router-link to="/"><span class="item"> Docentes </span></router-link>
-    <router-link to="/"><span class="item"> UNAL emprende </span></router-link>
-    <router-link to="/lanateam"><span class="item"> Lana Team </span></router-link>
-  </div>
-  <div v-else class="nav">
-    <router-link to="/"><span class="item"> Inicio </span></router-link>
-    <router-link to="/"><span class="item"> Grupos de WhatsApp </span></router-link>
-    <router-link to="/"><span class="item"> Colaboradores </span></router-link>
-    <router-link to="/"><span class="item"> Trabaja con nosotros  </span></router-link>
+  <div v-if="show" class="nav">
+    <router-link v-for="link in getLinks()" :key="link.val" :to="link.route">
+      <span class="item" @click="goTo(link.route)">
+        {{ link.val }}
+      </span>
+    </router-link>
   </div>
 </template>
 
-<script>
-export default {
-  data() {
-    return {
-      show: true,
-    };
-  },
-  watch: {
-    '$route'(to, from) {
-      const path = to.path;
-      if(path == '/' || path == '/lanateam'){ // Add other paths.
-        this.show = true;
-      } else {
-        this.show = false;
-      }
-    }
+<script setup>
+import { ref } from 'vue';
+import { useRouter } from 'vue-router';
+
+const router = useRouter();
+const show = ref(true);
+
+const getLinks = () => {
+  const links_show = [
+    { val: 'Inicio', route: '/' },
+    { val: 'Asignaturas', route: '/' },
+    { val: 'Docentes', route: '/' },
+    { val: 'UNAL emprende', route: '/' },
+    { val: 'Lana Team', route: '/lanateam' },
+  ]
+  const links_hide = [
+    { val: 'Inicio', route: '/' },
+    { val: 'Grupos de WhatsApp', route: '/' },
+    { val: 'Colaboradores', route: '/' },
+    { val: 'Trabaja con nosotros', route: '/' },
+  ]
+  if (router.currentRoute.value.path === '/lanateam' || router.currentRoute.value.path === '/') {
+    return links_show
+  } else {
+    return links_hide
   }
+}
+const goTo = (route) => {
+  router.push(route);
 }
 </script>
 
