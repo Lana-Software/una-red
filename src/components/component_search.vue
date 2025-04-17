@@ -1,12 +1,12 @@
-<template class="content">
+<template>
   <div class="search-bar">
-    <a href="#" class="burger-menu">
+    <mdui-button variant="text" href="#" class="burger-menu">
       <span class="material-symbols-outlined">menu</span>
-    </a>
+    </mdui-button>
     <input type="text" class="search" placeholder="Calculo diferencial.">
-    <div class="search-icon">
-      <span class="material-symbols-outlined">search</span>
-    </div>
+    <mdui-button variant="text" class="search-icon">
+      <div class="material-symbols-outlined">search</div>
+    </mdui-button>
   </div>
 </template>
 
@@ -16,33 +16,39 @@
 <style scoped>
 .search-bar {
   display: flex;
-  flex: 1;
   justify-content: center;
   align-items: center;
+  background-color: field;
+  border-radius: 1000rem;
+  overflow: hidden;
+  width: 60%;
 }
 
 .search-bar>.burger-menu,
 .search-bar>.search-icon {
-  box-sizing: border-box;
-  padding: 11px;
-  display: flex;
-  max-height: 100%;
-  min-height: 100%;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--color-primary);
-  border-radius: 50px 0 0 50px;
+  width: 3rem;
+}
+
+.burger-menu {
+  border-radius: 1000rem 0 0 1000rem;
 }
 
 .search-bar>.search-icon {
-  border-radius: 0px 50px 50px 0px;
+  border-radius: 0px 1000rem 1000rem 0px;
 }
 
 .search-bar>input {
-  box-sizing: border-box;
-  width: 425px;
+  flex: 1 1;
+  min-width: 100px;
   outline: none;
   border: none;
-  padding: 15px 10px;
+  padding: 0 10px;
+  font-size: 1em;
+}
+
+@media screen and (max-width: 500px) {
+  .search-bar {
+    width: 100%;
+  }
 }
 </style>

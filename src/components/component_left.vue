@@ -13,6 +13,9 @@
       <router-link to="/">
         <p class="menu-item"> Trabaja con nosotros </p>
       </router-link>
+      <router-link to="/lanateam">
+        <p class="menu-item"> Acerca de Lana Team </p>
+      </router-link>
       <button class="button-close" id="button-close" @click="hideMenu"> Cerrar menú </button>
     </div>
   </div>
@@ -39,7 +42,13 @@ const hideMenu = () => {
 </script>
 
 <style scoped>
+
+* {
+  z-index: 2001;
+}
+
 .button {
+  top: 2em;
   width: 36px;
   height: 36px;
   position: absolute;

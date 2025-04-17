@@ -1,56 +1,34 @@
-<template class="content">
-  <nav class="nav">
-    <md-tabs id="navbar-1">
-      <md-primary-tab v-for="link in getLinks()" :key="link.val" @click="$router.push('/')">
-        <span> {{ link.val }} </span>
-      </md-primary-tab>
-    </md-tabs>
-  </nav>
-</template>
-
 <script setup>
-import { useRouter } from 'vue-router';
+import { useRouter } from "vue-router";
 
 const router = useRouter();
 
 const getLinks = () => {
-  const links_show = [
-    { val: 'Inicio', route: '/' },
-    { val: 'Asignaturas', route: '/' },
-    { val: 'Docentes', route: '/' },
-    { val: 'UNAL emprende', route: '/' },
-    { val: 'Lana Team', route: '/lanateam' },
-  ]
-  const links_hide = [
-    { val: 'Inicio', route: '/' },
-    { val: 'Grupos de WhatsApp', route: '/' },
-    { val: 'Colaboradores', route: '/' },
-    { val: 'Trabaja con nosotros', route: '/' },
-  ]
-  if (router.currentRoute.value.path === '/lanateam' || router.currentRoute.value.path === '/') {
-    return links_show
-  } else {
-    return links_hide
-  }
-}
+	const links_show = [
+		{ val: "Inicio", route: "/", icon: "home" },
+		{ val: "Asignaturas", route: "/", icon: "school" },
+		{ val: "Docentes", route: "/", icon: "person_search" },
+		{ val: "UNAL Emprende", route: "/", icon: "store" },
+	]
+	return links_show;
+};
 </script>
 
-<style scoped>
-.nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+<template>
 
-.nav>md-tabs {
-  flex: 1 1;
-  max-width: 35%;
-}
+  <mdui-navigation-bar value="item-0">
+    <mdui-navigation-bar-item :icon="link.icon" v-for="(link, index) in getLinks()" :key="link.val" :value="'item-'+index" @click="$router.push('/')">
+      {{ link.val }}
+    </mdui-navigation-bar-item>
+  </mdui-navigation-bar>
 
-@media (max-width: 1250px) {
-  .nav>md-tabs {
-    flex: 1 1;
-    max-width: 80%;
+</template>
+
+<style>
+
+@media screen and (min-width: 900px) {
+  mdui-navigation-bar {
+    display: none;
   }
 }
 </style>

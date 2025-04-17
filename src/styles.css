@@ -34,7 +34,12 @@ a:active {
 
 body {
   background-color: var(--others-body-background-color);
-  min-height: 100dvh;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0; /* Remove default margin */
 }
 
 h1,
