@@ -1,43 +1,22 @@
 <template>
   <div class="team">
-    <div class="container">
-      <img src="@src/assets/110570465.jpeg" alt="" class="image-profile">
-      <info v-bind:title="Juan" v-bind:text="si" v-bind:type="si" />
-    </div>
-    <div class="container">
-      <img src="@src/assets/1.jpg" alt="" class="image-profile">
-      <info :title="dsa" :text="dsad" :type="dsadsa" />
-    </div>
-    <div class="container">
-      <img src="@src/assets/104475729.png" alt="" class="image-profile">
-      <info :title="dsadsa" :text="dsadsa" :type="dsadasd" />
-    </div>
+    <person_card image="https://avatars.githubusercontent.com/u/110570465?v=4" title="Juan Pablo Morales Cruz" username="Kolozuz" link="https://github.com/Kolozuz" />
+    <person_card image="https://avatars.githubusercontent.com/u/108627976?v=4" title="Duvan Espinal Arboleda" username="DuvanArwenLazar" link="https://github.com/DuvanArwenLazar" />
+    <person_card image="https://avatars.githubusercontent.com/u/104475729?v=4" title="John Steban Lopez" username="JohnGolgota" link="https://github.com/JohnGolgota" />
   </div>
 </template>
 
 <script setup>
-import info from '@src/components/component_info.vue';
+import person_card from "@src/components/component_person_card.vue";
 </script>
 
 <style scoped>
 .team {
-  margin-top: 35px;
   display: flex;
-  gap: 35px;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 1em;
   justify-content: center;
+  animation: fadeInDown 1s;
 }
 
-.container {
-  width: 20%;
-  height: auto;
-  overflow: hidden;
-}
-
-.image-profile {
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: 50%;
-}
 </style>
