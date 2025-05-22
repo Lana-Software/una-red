@@ -24,7 +24,6 @@ const props = defineProps({
 <style scoped>
 
 .container {
-  background-color: rgb(var(--mdui-color-surface)); /* default bg color is overridden cause it doesn't match the page's background very well */
   padding: 1rem;
 }
 
