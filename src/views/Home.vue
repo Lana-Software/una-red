@@ -9,6 +9,7 @@ import search from "@src/components/component_search.vue";
 
 <style scoped>
 .title {
+  animation: fadeInDown 1s;
   text-align: center;
   font-size: 2.5em;
 }

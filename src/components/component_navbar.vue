@@ -25,6 +25,9 @@ const getLinks = () => {
 </template>
 
 <style>
+mdui-navigation-bar {
+  animation: fadeInDown 1s;
+}
 
 @media screen and (min-width: 900px) {
   mdui-navigation-bar {

@@ -15,6 +15,7 @@
 
 <style scoped>
 .search-bar {
+  animation: fadeInDown 1s;
   display: flex;
   justify-content: center;
   align-items: center;

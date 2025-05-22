@@ -61,6 +61,7 @@ const hideMenu = () => {
   align-items: center;
   border-radius: 50%;
   cursor: pointer;
+  animation: fadeInDown 1s;
 }
 
 .menu {
